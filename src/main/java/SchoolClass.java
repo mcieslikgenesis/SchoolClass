@@ -1,67 +1,19 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.HashMap;
 
 public class SchoolClass {
-
-
-    private List<Students> students = new ArrayList<Students>();
+    private List<Student> students;
     private Teacher teacher;
-    private SchoolClass schoolClass;
-    private JournalClass journalClass;
-    HashMap<Students,JournalClass> classJournal = new HashMap<Students,JournalClass>();
 
-
-
-    public void setStudents (Students newStudent){
-        this.students.add(newStudent);
-
+    public SchoolClass( List<Student> students, Teacher teacher ){
+        this.students = students;
+        this.teacher = teacher;
     }
 
-    public void removeStudents (int removeStudent){
-        this.students.remove(removeStudent);
+    public void setStudents(List<Student> newStudents){
+        this.students = newStudents;
     }
 
-    public void setTeacher (Teacher newTeacher){
-        this.teacher = (newTeacher);
-
+    public void removeStudent(Student student) {
+        this.students.remove(student);
     }
-
-    public List<Students> getStudents() {
-        return students;
-    }
-
-
-   public void putMarkToStudent(Students typeStudent, JournalClass typeMark){
-
-       this.classJournal.put(typeStudent, typeMark);
-   }
-
-   public void removeMarkFromStudent( Students typeStudent){
-       this.classJournal.remove(typeStudent);
-   }
-
-    public JournalClass getStudentMarks(Students typeStudent) {
-
-        return classJournal.get(typeStudent);
-
-
-    }
-
-    public JournalClass getAvgForEachStudent(Students typeStudent){
-        return classJournal.get(typeStudent);
-
-
-
-    }
-
-
-
 }
-
-
-
-
-
-
-

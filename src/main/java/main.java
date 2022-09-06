@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 
 public class main {
     public static void main(String args[]){
@@ -12,6 +10,7 @@ public class main {
         var patrycja = new Student("Patrycja");
         var julia = new Student("Julia");
         var anita = new Student("Anita");
+        var bartek = new Teacher("Bartek");
 
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);

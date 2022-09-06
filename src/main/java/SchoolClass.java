@@ -16,4 +16,8 @@ public class SchoolClass {
     public void removeStudent(Student student) {
         this.students.remove(student);
     }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 }

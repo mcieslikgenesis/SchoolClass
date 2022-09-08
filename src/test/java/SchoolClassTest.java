@@ -37,5 +37,24 @@ class SchoolClassTest {
 
     }
 
+    @Test
+    public void createSchoolClass(){
+
+        //arrange
+
+        var studentsList = new ArrayList<Student>();
+        var martyna = new Student("Martyna");
+        var anita = new Student("Anita");
+        var bartek = new Teacher("Bartek");
+        studentsList.add(martyna);
+        var schoolClass = new SchoolClass(studentsList,bartek);
+        //act
+        schoolClass.setStudents(anita);
+        //assert
+
+
+
+    }
+
 
 }

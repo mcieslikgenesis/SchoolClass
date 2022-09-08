@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class main {
     public static void main(String args[]){
@@ -18,6 +19,8 @@ public class main {
         studentsList.add(patrycja);
         studentsList.add(julia);
         studentsList.add(anita);
+
+        var schoolClass = new SchoolClass(studentsList,bartek);
 
         var journal = new GradingJournal(studentsList);
 
@@ -40,8 +43,18 @@ public class main {
 
         journal.UpdateGrade(martyna, Arrays.asList(5d, 6d));
 
+
+
+
         var average = journal.GetStudentAverageGrade(martyna);
 
         var a = journal.GetTopStudents(3);
+
+        Stream<Student> stream = studentsList.stream();
+
+        System.out.println(studentsList);
+
+
+
     }
 }

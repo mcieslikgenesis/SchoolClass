@@ -1,16 +1,23 @@
-import java.util.List;
-
+import java.util.ArrayList;
 public class SchoolClass {
-    private List<Student> students;
-    private Teacher teacher;
+    public ArrayList<Student> students;
+    public Teacher teacher;
 
-    public SchoolClass( List<Student> students, Teacher teacher ){
+    public SchoolClass( ArrayList<Student> students, Teacher teacher ){
         this.students = students;
         this.teacher = teacher;
     }
 
-    public void setStudents(List<Student> newStudents){
-        this.students = newStudents;
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setStudents(Student newStudents){
+        this.students.add(newStudents);
     }
 
     public void removeStudent(Student student) {
@@ -20,4 +27,6 @@ public class SchoolClass {
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
+
+
 }

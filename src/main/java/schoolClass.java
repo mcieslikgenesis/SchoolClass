@@ -1,12 +1,14 @@
 import java.util.ArrayList;
-public class SchoolClass {
+public class schoolClass {
     public ArrayList<Student> students;
     public Teacher teacher;
 
-    public SchoolClass( ArrayList<Student> students, Teacher teacher ){
+    public schoolClass(ArrayList<Student> students, Teacher teacher ){
         this.students = students;
         this.teacher = teacher;
     }
+
+
 
     public ArrayList<Student> getStudents() {
         return students;

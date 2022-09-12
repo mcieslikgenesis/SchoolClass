@@ -1,7 +1,16 @@
 public class Student {
-    public String Name;
+    public String name;
 
-    public Student(String Name) {
-        this.Name = Name;
+    public Student(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString(){
+        return "\n{" + name + "}\n";
+    }
+
+    public String getName() {
+        return name;
     }
 }

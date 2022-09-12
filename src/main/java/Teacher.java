@@ -1,9 +1,20 @@
 public class Teacher {
 
-    public String Name;
+    public String name;
 
-    public Teacher (String Name) {
-        this.Name = Name;
+
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString(){
+        return "\n{"+ name +"}\n";
+    }
+
+    public Teacher (String name) {
+        this.name = name;
     }
 
 }

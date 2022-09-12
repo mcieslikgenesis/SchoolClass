@@ -2,7 +2,7 @@ import java.util.*;
 
 public class GradingJournal {
 
-    private HashMap<Student, List<Double>> journal;
+    public HashMap<Student, List<Double>> journal;
 
     public GradingJournal(List<Student> students) {
         this.journal = new HashMap<Student, List<Double>>();
@@ -14,21 +14,25 @@ public class GradingJournal {
         }
     }
 
-    public void AddGrade(Student student, Double grade) {
+    public HashMap<Student, List<Double>> getJournal() {
+        return journal;
+    }
+
+    public void addGrade(Student student, Double grade) {
         var studentGrades = this.journal.get(student);
         studentGrades.add(grade);
     }
 
-    public void RemoveGrade(Student student) {
+    public void removeGrade(Student student) {
         var studentGrades = this.journal.get(student);
         studentGrades.clear();
     }
 
-    public void UpdateGrade(Student student, List<Double> grades) {
+    public void updateGrade(Student student, List<Double> grades) {
         journal.put(student, grades);
     }
 
-    public Double GetStudentAverageGrade(Student student) {
+    public Double getStudentAverageGrade(Student student) {
         var studentGrades = this.journal.get(student);
         var sum = 0.0;
         var studentGradesLength = studentGrades.size();
@@ -41,12 +45,12 @@ public class GradingJournal {
         return averageGrade;
     }
 
-    public List<Student> GetTopStudents(int topStudentsCount) {
+    public List<Map.Entry<Student, Double>> getTopStudents(int topStudentsCount) {
         var studentsAverage = new HashMap<Student, Double>();
         var students = journal.keySet();
 
         for(var student : students){
-            var studentAverage = GetStudentAverageGrade(student);
+            var studentAverage = getStudentAverageGrade(student);
             studentsAverage.put(student, studentAverage);
         }
 
@@ -62,6 +66,6 @@ public class GradingJournal {
 
         var topStudents = results.subList(0, topStudentsCount);
 
-        return null;
+        return topStudents;
     }
 }

@@ -1,10 +1,10 @@
 import java.util.*;
 
-public class GradingJournal {
+public class gradingJournal {
 
     public HashMap<Student, List<Double>> journal;
 
-    public GradingJournal(List<Student> students) {
+    public gradingJournal(List<Student> students) {
         this.journal = new HashMap<Student, List<Double>>();
 
         for (var i = 0; i < students.size(); i++) {

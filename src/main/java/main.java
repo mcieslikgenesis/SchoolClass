@@ -21,7 +21,7 @@ public class main {
 
         var schoolClass = new schoolClass(studentsList,bartek);
 
-        var journal = new GradingJournal(studentsList);
+        var journal = new gradingJournal(studentsList);
 
         journal.addGrade(martyna, 3d);
         journal.addGrade(martyna, 6d);
@@ -48,9 +48,11 @@ public class main {
 
         var a = journal.getTopStudents(5);
 
-        System.out.println(a);
-
-
+        //System.out.println(a);
+        int i = 5;
+        for (; i > 0 ; i--) {
+            System.out.println(i);
+        }
 
 
 

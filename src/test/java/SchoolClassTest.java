@@ -68,7 +68,7 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
         var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new GradingJournal(studentsList);
+        var journal = new gradingJournal(studentsList);
 
         //act
         journal.addGrade(martyna, 3d);
@@ -86,7 +86,7 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
         var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new GradingJournal(studentsList);
+        var journal = new gradingJournal(studentsList);
 
         //act
         journal.addGrade(martyna, 3d);
@@ -104,7 +104,7 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
         var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new GradingJournal(studentsList);
+        var journal = new gradingJournal(studentsList);
 
         //act
         journal.addGrade(martyna, 3d);
@@ -124,7 +124,7 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
         var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new GradingJournal(studentsList);
+        var journal = new gradingJournal(studentsList);
         journal.addGrade(martyna, 5d);
         journal.addGrade(martyna, 6d);
         //act
@@ -147,7 +147,7 @@ class SchoolClassTest {
         studentsList.add(martyna);
         studentsList.add(julia);
         var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new GradingJournal(studentsList);
+        var journal = new gradingJournal(studentsList);
         journal.addGrade(martyna, 5d);
         journal.addGrade(martyna, 6d);
         journal.addGrade(julia, 2d);
@@ -158,7 +158,7 @@ class SchoolClassTest {
 
 
         //assert
-        assertEquals(avgOfBestStudentResult,result.get(1).getValue());
+        assertEquals(avgOfBestStudentResult,result.get(0).getValue());
 
 
 

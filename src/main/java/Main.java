@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class main {
+public class Main {
     public static void main(String args[]){
         System.out.println("Hello");
 
@@ -19,9 +19,9 @@ public class main {
         studentsList.add(julia);
         studentsList.add(anita);
 
-        var schoolClass = new schoolClass(studentsList,bartek);
+        var schoolClass = new SchoolClass(studentsList,bartek);
 
-        var journal = new gradingJournal(studentsList);
+        var journal = new GradingJournal(studentsList);
 
         journal.addGrade(martyna, 3d);
         journal.addGrade(martyna, 6d);

@@ -17,7 +17,7 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         var martyna = new Student("Martyna");
         var bartek = new Teacher("Bartek");
-        var schoolClass = new schoolClass(studentsList,bartek);
+        var schoolClass = new SchoolClass(studentsList,bartek);
         //act
         schoolClass.setStudents(martyna);
         //assert
@@ -34,7 +34,7 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         var martyna = new Student("Martyna");
         var bartek = new Teacher("Bartek");
-        var schoolClass = new schoolClass(studentsList,bartek);
+        var schoolClass = new SchoolClass(studentsList,bartek);
         schoolClass.setStudents(martyna);
         //act
         schoolClass.removeStudent(martyna);
@@ -50,7 +50,7 @@ class SchoolClassTest {
         //arrange
         var studentsList = new ArrayList<Student>();
         var bartek = new Teacher("Bartek");
-        var schoolClass = new schoolClass(studentsList,bartek);
+        var schoolClass = new SchoolClass(studentsList,bartek);
         var mirek = new Teacher("Mirek");
         //act
         schoolClass.setTeacher(mirek);
@@ -67,8 +67,8 @@ class SchoolClassTest {
         var bartek = new Teacher("Bartek");
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
-        var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new gradingJournal(studentsList);
+        var schoolClass = new SchoolClass(studentsList,bartek);
+        var journal = new GradingJournal(studentsList);
 
         //act
         journal.addGrade(martyna, 3d);
@@ -85,8 +85,8 @@ class SchoolClassTest {
         var bartek = new Teacher("Bartek");
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
-        var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new gradingJournal(studentsList);
+        var schoolClass = new SchoolClass(studentsList,bartek);
+        var journal = new GradingJournal(studentsList);
 
         //act
         journal.addGrade(martyna, 3d);
@@ -103,8 +103,8 @@ class SchoolClassTest {
         var bartek = new Teacher("Bartek");
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
-        var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new gradingJournal(studentsList);
+        var schoolClass = new SchoolClass(studentsList,bartek);
+        var journal = new GradingJournal(studentsList);
 
         //act
         journal.addGrade(martyna, 3d);
@@ -123,8 +123,8 @@ class SchoolClassTest {
         var bartek = new Teacher("Bartek");
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
-        var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new gradingJournal(studentsList);
+        var schoolClass = new SchoolClass(studentsList,bartek);
+        var journal = new GradingJournal(studentsList);
         journal.addGrade(martyna, 5d);
         journal.addGrade(martyna, 6d);
         //act
@@ -146,8 +146,8 @@ class SchoolClassTest {
         var studentsList = new ArrayList<Student>();
         studentsList.add(martyna);
         studentsList.add(julia);
-        var schoolClass = new schoolClass(studentsList,bartek);
-        var journal = new gradingJournal(studentsList);
+        var schoolClass = new SchoolClass(studentsList,bartek);
+        var journal = new GradingJournal(studentsList);
         journal.addGrade(martyna, 5d);
         journal.addGrade(martyna, 6d);
         journal.addGrade(julia, 2d);

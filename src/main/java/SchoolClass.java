@@ -1,9 +1,9 @@
 import java.util.ArrayList;
-public class schoolClass {
+public class SchoolClass {
     public ArrayList<Student> students;
     public Teacher teacher;
 
-    public schoolClass(ArrayList<Student> students, Teacher teacher ){
+    public SchoolClass(ArrayList<Student> students, Teacher teacher ){
         this.students = students;
         this.teacher = teacher;
     }
